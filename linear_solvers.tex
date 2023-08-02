@@ -188,8 +188,6 @@ Generic block preconditioning strategies such as Jacobi and Gauss-Seidel and com
 Block preconditioners for first order formulations of Maxwell's equations are distributed with the Panzer package.
 
 
-
-
 \subsection{Eigensolvers}
 Anasazi~\cite{Baker2009a} is an extensible and interoperable framework for large-scale eigenvalue algorithms.
 This framework provides a generic interface to a collection of algorithms that are built upon abstract interfaces
@@ -200,6 +198,30 @@ investment in their description of matrices and vectors.  Any libraries that und
 and vectors, like Belos and Ifpack2, may also be used in conjunction with Anasazi.  The suite of eigensolvers provided
 by Anasazi includes locally-optimal block preconditioned conjugate gradient (LOBPCG), block Davidson, Riemannian Trust-Region
 (RTR), and block Krylov-Schur.  Recently, there has been a family of trace minimization (TraceMin) methods and a
-generalized Davidson method added to the suite of eigensolvers in Anasazi. 
+generalized Davidson method added to the suite of eigensolvers in Anasazi.
+
+
+\subsection{Thyra and Stratimikos}
+\label{sec:thyra}
+\label{sec:stratimikos}
+
+The Thyra\cite{???} package contains a set of abstract polymorphic interfaces and supporting software for building abstract numerical algorithms.
+Abstract numerical algorithms (ANAs) only require basic vector and multi-vector operations, linear operator applications, and functions for computing vectors and linear operators and don't require any knowledge or low-level access to the elements of these objects.
+Examples of Trilinos packages that implement ANAs using Thyra include Belos, Anasazi, NOX, Tempus, ROL, and Piro.
+As a result, the implemented ANAs can be efficiently applied to any problem domain and can exploit any problem structure.
+
+The Thyra package is composed the following subpacka:
+
+* \text{Thyra
+
+
+
+for vectors, vector spaces, and linear operators.
+I
+
+The client
+
+
+
 
 \todo{CG: How about Stratimikos or Stratimikos2? }
